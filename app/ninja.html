@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Google Phone Gallery</title>
@@ -7,15 +7,13 @@
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
-  <script src="js/angular-file-upload.min.js"></script> 
+  <script src="js/angular-file-upload.min.js"></script>
 
 </head>
-<body ng-controller="PhoneListCtrl">
-    <div width=50%>
+<body>
     <div ng-app="app">
     <div ng-controller="AppController">
-        <!-- about HTML5 camera tag http://stackoverflow.com/questions/21523544/html-file-input-control-with-capture-and-accept-attributes-works-wrong -->
-        <input type="file" accept="image/*;capture=camera" nv-file-select uploader="uploader"/><br/>
+        <input type="file" nv-file-select uploader="uploader"/><br/>
         <ul>
             <li ng-repeat="item in uploader.queue">
                 Name: <span ng-bind="item.file.name"></span><br/>
@@ -23,7 +21,6 @@
             </li>
         </ul>
     </div>
-</div>
 
 
 
